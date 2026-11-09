@@ -19,7 +19,7 @@
     <ClCompile Include="src\Player.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sphere.cpp">
+    <ClCompile Include="src\CBController.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,7 +48,7 @@
     <ClInclude Include="targetver.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="include\Sphere.h">
+    <ClInclude Include="include\CBController.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
@@ -132,6 +132,12 @@
       <Filter>リソース ファイル</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="..\resource\VertexTest.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\resource\PixelTest1.hlsl">
+      <Filter>リソース ファイル</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\resource\PixelTest2.hlsl">
       <Filter>リソース ファイル</Filter>
     </CopyFileToFolders>
   </ItemGroup>

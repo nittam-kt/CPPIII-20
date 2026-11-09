@@ -1,7 +1,13 @@
 // ----------------------------------------------------------
-// 頂点カラーを使うだけの単純なシェーダー
-// 頂点に VertexPC を使う
+// テスト用シェーダー
+// 頂点に VertexPN を使う
 // ----------------------------------------------------------
+
+// 今回追加した定数バッファ
+cbuffer CBParam : register(b0)
+{
+    float4 baseColor;
+};
 
 // ----------------------------------------------------------
 // 頂点
@@ -51,13 +57,16 @@ PSInput VS(VSInput vin)
 
     float4 worldPos = p;
 
+    float l = length(worldPos.xz);
+    worldPos.y += sin(l * -0.5 + time.x);
+
     p = mul(worldPos, view);
     p = mul(p, projection);
 
     Out.pos = p;
     
-    float c = local.y * 0.25 + 0.25;
-    Out.color = float4(c, c, c, 1);
+    float c = worldPos.y * 0.2 + 0.5;
+    Out.color = baseColor * float4(c, c, c, 1);
 
     return Out;
 }

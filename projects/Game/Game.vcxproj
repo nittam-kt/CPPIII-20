@@ -267,23 +267,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CameraController.h" />
+    <ClInclude Include="include\CBController.h" />
     <ClInclude Include="include\framework.h" />
     <ClInclude Include="include\LightController.h" />
     <ClInclude Include="include\main.h" />
     <ClInclude Include="include\MainGame.h" />
     <ClInclude Include="include\Player.h" />
-    <ClInclude Include="include\Sphere.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CameraController.cpp" />
+    <ClCompile Include="src\CBController.cpp" />
     <ClCompile Include="src\CreateDefaultScene.cpp" />
     <ClCompile Include="src\LightController.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MainGame.cpp" />
     <ClCompile Include="src\Player.cpp" />
-    <ClCompile Include="src\Sphere.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="..\resource\AlbedoShadeSpec.hlsl">
@@ -467,6 +467,18 @@
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="..\resource\VertexTest.hlsl">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\resource</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\resource\PixelTest1.hlsl">
+      <FileType>Document</FileType>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\resource</DestinationFolders>
+      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\resource\PixelTest2.hlsl">
       <FileType>Document</FileType>
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)\resource</DestinationFolders>
       <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)\resource</DestinationFolders>
